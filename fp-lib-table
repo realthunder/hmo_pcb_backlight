@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name backlight)(type KiCad)(uri "$(KIPRJMOD)\\backlight.pretty")(options "")(descr ""))
+)

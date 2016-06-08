@@ -1,0 +1,13 @@
+(module MountingHole_1.5mm (layer F.Cu) (tedit 5757D306)
+  (descr "Mounting Hole 1.5mm, no annular")
+  (tags "mounting hole 1.5mm no annular")
+  (zone_connect 2)
+  (fp_text reference REF** (at 0 -3.5) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value MountingHole_1.5mm (at 0 3.5) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad "" np_thru_hole circle (at 0 0) (size 1.5 1.5) (drill 1.5) (layers *.Cu)
+    (zone_connect 2))
+)

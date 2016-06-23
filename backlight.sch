@@ -188,19 +188,6 @@ F 3 "" H 2150 2700 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L C_Small C2
-U 1 1 57569AF5
-P 2150 3000
-F 0 "C2" V 2100 3050 50  0000 L CNN
-F 1 "0.1uF" V 2250 2900 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 2150 3000 50  0001 C CNN
-F 3 "" H 2150 3000 50  0000 C CNN
-	1    2150 3000
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1950 2700 2050 2700
-$Comp
 L GND #PWR04
 U 1 1 5756A0BF
 P 1750 3000
@@ -211,30 +198,6 @@ F 3 "" H 1750 3000 50  0000 C CNN
 	1    1750 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2250 2700 2400 2700
-Wire Wire Line
-	1750 3000 2050 3000
-Connection ~ 1950 3000
-Wire Wire Line
-	2250 3000 2400 3000
-Connection ~ 2400 3000
-Wire Wire Line
-	6200 2850 6200 3300
-Wire Wire Line
-	6200 2750 6300 2750
-Wire Wire Line
-	6300 2750 6300 3400
-Wire Wire Line
-	6300 3400 6200 3400
-Wire Wire Line
-	3400 3400 3400 3850
-Wire Wire Line
-	3400 3300 3300 3300
-Wire Wire Line
-	3300 3300 3300 3950
-Wire Wire Line
-	3300 3950 3400 3950
 NoConn ~ 6200 3950
 $Comp
 L CONN_01X05 P1
@@ -251,8 +214,6 @@ Text Label 1950 3550 0    60   ~ 0
 MISO
 Text Label 6200 3850 0    60   ~ 0
 MISO
-Wire Wire Line
-	1950 1000 1950 1150
 $Comp
 L PWR_FLAG #FLG05
 U 1 1 57572826
@@ -275,6 +236,36 @@ F 3 "" H 1400 1150 50  0000 C CNN
 	1    1400 1150
 	1    0    0    -1  
 $EndComp
+Text Label 1950 3750 0    60   ~ 0
+MOSI
+Text Label 1950 3850 0    60   ~ 0
+CLK
+Text Label 3150 2750 0    60   ~ 0
+CLK
+Text Label 3150 2850 0    60   ~ 0
+MOSI
+Wire Wire Line
+	1950 2700 2050 2700
+Wire Wire Line
+	2250 2700 2400 2700
+Wire Wire Line
+	6200 2850 6200 3300
+Wire Wire Line
+	6200 2750 6300 2750
+Wire Wire Line
+	6300 2750 6300 3400
+Wire Wire Line
+	6300 3400 6200 3400
+Wire Wire Line
+	3400 3400 3400 3850
+Wire Wire Line
+	3400 3300 3300 3300
+Wire Wire Line
+	3300 3300 3300 3950
+Wire Wire Line
+	3300 3950 3400 3950
+Wire Wire Line
+	1950 1000 1950 1150
 Wire Wire Line
 	1400 1000 1400 1150
 Wire Wire Line
@@ -301,16 +292,8 @@ Wire Wire Line
 	5200 3850 5400 3850
 Wire Wire Line
 	5200 3950 5400 3950
-Text Label 1950 3850 0    60   ~ 0
-MOSI
-Text Label 1950 3750 0    60   ~ 0
-CLK
-Text Label 3150 2750 0    60   ~ 0
-CLK
 Wire Wire Line
 	3150 2750 3400 2750
-Text Label 3150 2850 0    60   ~ 0
-MOSI
 Wire Wire Line
 	3150 2850 3400 2850
 Connection ~ 2400 2700
@@ -320,4 +303,7 @@ Wire Wire Line
 	2400 2600 2400 3650
 Wire Wire Line
 	2400 3650 1950 3650
+Wire Wire Line
+	1750 3000 1950 3000
+Connection ~ 1950 3000
 $EndSCHEMATC

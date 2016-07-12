@@ -29,7 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:superled
-LIBS:backlight-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -200,20 +199,16 @@ F 3 "" H 1750 3000 50  0000 C CNN
 $EndComp
 NoConn ~ 6200 3950
 $Comp
-L CONN_01X05 P1
+L CONN_01X04 P1
 U 1 1 5756AF90
-P 1750 3650
-F 0 "P1" H 1750 3950 50  0000 C CNN
-F 1 "CONN_01X05" V 1850 3650 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_Panelmate-53780-0570_05x1.25mm_Angled" H 1750 3650 50  0001 C CNN
-F 3 "" H 1750 3650 50  0000 C CNN
-	1    1750 3650
+P 1750 3700
+F 0 "P1" H 1750 4000 50  0000 C CNN
+F 1 "CONN_01X05" V 1850 3700 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_Panelmate-53780-0470_04x1.25mm_Angled" H 1750 3700 50  0001 C CNN
+F 3 "" H 1750 3700 50  0000 C CNN
+	1    1750 3700
 	-1   0    0    -1  
 $EndComp
-Text Label 1950 3550 0    60   ~ 0
-MISO
-Text Label 6200 3850 0    60   ~ 0
-MISO
 $Comp
 L PWR_FLAG #FLG05
 U 1 1 57572826
@@ -237,33 +232,21 @@ F 3 "" H 1400 1150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 1950 3750 0    60   ~ 0
-MOSI
+CLK
 Text Label 1950 3850 0    60   ~ 0
-CLK
-Text Label 3150 2750 0    60   ~ 0
-CLK
-Text Label 3150 2850 0    60   ~ 0
 MOSI
+Text Label 3150 2750 0    60   ~ 0
+MOSI
+Text Label 3150 2850 0    60   ~ 0
+CLK
 Wire Wire Line
 	1950 2700 2050 2700
 Wire Wire Line
 	2250 2700 2400 2700
 Wire Wire Line
-	6200 2850 6200 3300
-Wire Wire Line
 	6200 2750 6300 2750
 Wire Wire Line
-	6300 2750 6300 3400
-Wire Wire Line
-	6300 3400 6200 3400
-Wire Wire Line
-	3400 3400 3400 3850
-Wire Wire Line
 	3400 3300 3300 3300
-Wire Wire Line
-	3300 3300 3300 3950
-Wire Wire Line
-	3300 3950 3400 3950
 Wire Wire Line
 	1950 1000 1950 1150
 Wire Wire Line
@@ -298,7 +281,7 @@ Wire Wire Line
 	3150 2850 3400 2850
 Connection ~ 2400 2700
 Wire Wire Line
-	1950 2700 1950 3450
+	1950 2700 1950 3550
 Wire Wire Line
 	2400 2600 2400 3650
 Wire Wire Line
@@ -306,4 +289,25 @@ Wire Wire Line
 Wire Wire Line
 	1750 3000 1950 3000
 Connection ~ 1950 3000
+Wire Wire Line
+	6300 2750 6300 3300
+Wire Wire Line
+	6300 3300 6200 3300
+Wire Wire Line
+	6200 2850 6400 2850
+Wire Wire Line
+	6400 2850 6400 3400
+Wire Wire Line
+	6400 3400 6200 3400
+Wire Wire Line
+	3300 3300 3300 3850
+Wire Wire Line
+	3300 3850 3400 3850
+Wire Wire Line
+	3400 3400 3200 3400
+Wire Wire Line
+	3200 3400 3200 3950
+Wire Wire Line
+	3200 3950 3400 3950
+NoConn ~ 6200 3850
 $EndSCHEMATC
